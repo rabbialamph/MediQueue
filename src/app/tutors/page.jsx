@@ -12,7 +12,7 @@ const Tutors = async () => {
   const tutors = await getTutorsData();
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#F6F8FC] via-white to-[#EEF2FF] dark:from-[#070B14] dark:via-[#0B1020] dark:to-black transition-colors duration-500">
+    <div className="relative min-h-screen overflow-hidden transition-colors duration-500">
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-14">
 
