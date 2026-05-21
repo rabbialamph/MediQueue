@@ -50,6 +50,12 @@ const LoginPage = () => {
     }
   };
 
+  const GoogleHandleSignIn = async () =>{
+    await authClient.signIn.social({
+      provider: 'google'
+    })
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black dark:text-white text-black px-4 py-4 overflow-hidden transition-all">
 
@@ -147,7 +153,7 @@ const LoginPage = () => {
 
         {/* GOOGLE */}
         <div className="mb-4">
-          <Button className="w-full cursor-pointer py-2 rounded-full bg-white text-black hover:scale-[1.02] transition font-medium flex items-center justify-center gap-2">
+          <Button  onClick={GoogleHandleSignIn} className="w-full cursor-pointer py-2 rounded-full bg-white text-black hover:scale-[1.02] transition font-medium flex items-center justify-center gap-2">
             <FcGoogle size={22} />
             Login with Google
           </Button>
