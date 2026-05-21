@@ -3,8 +3,8 @@ import { auth } from "./auth";
 
 export const getTutorsData = async (email) => {
   const url = email
-    ? `http://localhost:5000/tutors?email=${email}`
-    : `http://localhost:5000/tutors`;
+    ? `${process.env.NEXT_PUBLIC_SERVER_URL}/tutors?email=${email}`
+    : `${process.env.NEXT_PUBLIC_SERVER_URL}/tutors`;
 
   const res = await fetch(url, { cache: "no-store" });
   return res.json();
@@ -13,7 +13,7 @@ export const getTutorsData = async (email) => {
 
 export const getTutorsDataHome = async () => {
   const res = await fetch(
-    "http://localhost:5000/tutors?limit=6",
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/tutors?limit=6`,
     { cache: "no-store" }
   );
 
@@ -26,7 +26,7 @@ export const getTutorId = async (_id) =>{
     });
     console.log(token);
 
-    const req = await fetch(`http://localhost:5000/tutors/${_id}`,{
+    const req = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/tutors/${_id}`,{
 
         headers: {
            authorization: `Bearer ${token}`
@@ -34,6 +34,7 @@ export const getTutorId = async (_id) =>{
          cache: "no-store" 
     });
     const tutorsData = await req.json();
+    console.log(tutorsData)
     return tutorsData;
 };
 
@@ -45,7 +46,7 @@ export const getBookingData = async (email) => {
     });
     console.log(token);
 
-  const req = await fetch(`http://localhost:5000/booking?email=${email}`,{
+  const req = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking?email=${email}`,{
         headers: {
            authorization: `Bearer ${token}`
         }, 

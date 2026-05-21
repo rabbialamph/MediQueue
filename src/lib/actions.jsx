@@ -23,7 +23,7 @@ export const createTutor = async (formData) => {
     hourlyFee: Number(tutor.hourlyFee),
   };
 
-  const res = await fetch("http://localhost:5000/tutors", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/tutors`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -50,7 +50,7 @@ export const createBooking = async (formData) => {
 
   const booking = Object.fromEntries(formData.entries());
 
-  const res = await fetch("http://localhost:5000/booking", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -77,7 +77,7 @@ export const cancelBooking = async (id) => {
     headers: await headers(),
   });
 
-  const res = await fetch(`http://localhost:5000/booking/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -101,7 +101,7 @@ export const deleteTutor = async (id) => {
     headers: await headers(),
   });
 
-  const res = await fetch(`http://localhost:5000/tutors/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/tutors/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -132,7 +132,7 @@ export const updateTutor = async (id, formData) => {
       : undefined,
   };
 
-  const res = await fetch(`http://localhost:5000/tutors/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/tutors/${id}`, {
     method: "PATCH",
     headers: {
       "content-type": "application/json",
