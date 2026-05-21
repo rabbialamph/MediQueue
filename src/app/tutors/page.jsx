@@ -40,7 +40,7 @@ const Tutors = async () => {
             with personalized 1-on-1 tutoring sessions.
           </p>
         </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-3 gap-5 md:gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-7">
             {tutors.map((tutor) => (
               <TutorsCard key={tutor._id} tutor={tutor} />
             ))}
