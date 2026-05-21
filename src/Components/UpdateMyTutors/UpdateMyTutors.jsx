@@ -41,12 +41,10 @@ const handleSubmit = async (formData) => {
 
   return (
     <>
-      {/* OPEN BUTTON */}
       <Button className='cursor-pointer' variant="secondary" onPress={() => setOpen(true)}>
         Update
       </Button>
 
-      {/* MODAL */}
       <Modal isOpen={open} onOpenChange={setOpen}>
         <Modal.Backdrop>
           <Modal.Container placement="center">
@@ -59,7 +57,6 @@ const handleSubmit = async (formData) => {
                     action={handleSubmit}
                     className="space-y-6"
                   >
-                    {/* Tutor Name */}
                     <TextField
                     defaultValue={tutor.tutorName}
                     >
@@ -69,7 +66,6 @@ const handleSubmit = async (formData) => {
                       />
                     </TextField>
 
-                    {/* Photo */}
                     <TextField
                         defaultValue={tutor.photo}
                     >
@@ -79,7 +75,6 @@ const handleSubmit = async (formData) => {
                       />
                     </TextField>
 
-                    {/* Subject */}
                                      
                 <TextField
                     defaultValue={tutor.subject}
@@ -97,7 +92,6 @@ const handleSubmit = async (formData) => {
                       </select>
                     </TextField>
 
-                    {/* Availability */}
                     <TextField
                     defaultValue={tutor.availability}
                     >
@@ -108,7 +102,6 @@ const handleSubmit = async (formData) => {
                       />
                     </TextField>
 
-                    {/* Hourly Fee */}
                     <TextField
                     defaultValue={tutor.hourlyFee}
                     >
@@ -120,7 +113,6 @@ const handleSubmit = async (formData) => {
                       />
                     </TextField>
 
-                    {/* Total Slot */}
                     <TextField
                     defaultValue={tutor.totalSlot}
                     >
@@ -132,7 +124,6 @@ const handleSubmit = async (formData) => {
                       />
                     </TextField>
 
-                    {/* Start Date */}
                     <TextField
                     defaultValue={tutor.startDate}
                     >
@@ -144,7 +135,6 @@ const handleSubmit = async (formData) => {
                       />
                     </TextField>
 
-                    {/* Institution */}
                     <TextField
                     defaultValue={tutor.institution}
                     >
@@ -155,7 +145,6 @@ const handleSubmit = async (formData) => {
                       />
                     </TextField>
 
-                    {/* Location */}
                     <TextField
                     defaultValue={tutor.location}
                     >
@@ -166,7 +155,6 @@ const handleSubmit = async (formData) => {
                       />
                     </TextField>
 
-                    {/* Mode */}
                     <TextField
                     defaultValue={tutor.mode}
                     >
@@ -182,7 +170,6 @@ const handleSubmit = async (formData) => {
                       </select>
                     </TextField>
 
-                    {/* ACTIONS */}
                     <div className="flex gap-3 justify-end">
                       <Button
                         type="button"

@@ -40,8 +40,8 @@ const NavLinks = ({ mobile = false, onClose }) => {
                   px-4 py-2.5 rounded-full text-sm
                   ${
                     active
-                      ? "bg-white/80 dark:bg-white/10 text-indigo-600 shadow-sm border border-white/20"
-                      : "text-gray-600 dark:text-gray-300 hover:bg-white/60 dark:hover:bg-white/10 hover:text-indigo-600"
+                      ? "bg-white/80 dark:bg-white/10 text-blue-600 shadow-sm border border-white/20"
+                      : "text-gray-600 dark:text-gray-300 hover:bg-white/60 dark:hover:bg-white/10 hover:text-blue-600"
                   }
                 `
               }
@@ -50,7 +50,6 @@ const NavLinks = ({ mobile = false, onClose }) => {
 
             {link.name}
 
-            {/* Mobile active indicator */}
             {mobile && active && (
               <span className="h-2 w-2 rounded-full bg-white/90" />
             )}

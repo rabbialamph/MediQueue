@@ -1,60 +1,58 @@
 import React from "react";
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <footer className="relative border-t border-white/10 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-[#020617] dark:via-[#020617] dark:to-black text-gray-700 dark:text-gray-300">
 
-      <div className="container mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="container mx-auto px-3 py-14 grid grid-cols-1 md:grid-cols-3 gap-12">
 
-        {/* BRAND */}
         <div className="space-y-4">
 
           <h2 className="text-2xl font-black tracking-tight text-gray-900 dark:text-white">
-            Medi<span className="text-indigo-500">Queue</span>
+            Medi<span className="text-blue-600">Queue</span>
           </h2>
 
           <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400 max-w-sm">
             Find expert tutors, book sessions, and level up your learning journey with a modern, seamless experience.
           </p>
 
-          {/* SOCIAL */}
           <div className="flex gap-4 pt-2 text-lg">
 
-            <a
-              href="#"
+            <Link
+              href="https://web.facebook.com/rabbialambd"
               className="h-10 w-10 flex items-center justify-center rounded-xl border border-white/10 bg-white/40 dark:bg-white/5 hover:bg-indigo-500/10 hover:text-indigo-500 transition"
             >
               <FaFacebook />
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="#"
               className="h-10 w-10 flex items-center justify-center rounded-xl border border-white/10 bg-white/40 dark:bg-white/5 hover:bg-indigo-500/10 hover:text-indigo-500 transition"
             >
-              <FaTwitter />
-            </a>
+              <FaX />
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              href="https://github.com/rabbialamph"
               className="h-10 w-10 flex items-center justify-center rounded-xl border border-white/10 bg-white/40 dark:bg-white/5 hover:bg-indigo-500/10 hover:text-indigo-500 transition"
             >
-              <FaInstagram />
-            </a>
+              <FaGithub />
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              href="https://www.linkedin.com/in/rabbialam-webdeveloper"
               className="h-10 w-10 flex items-center justify-center rounded-xl border border-white/10 bg-white/40 dark:bg-white/5 hover:bg-indigo-500/10 hover:text-indigo-500 transition"
             >
               <FaLinkedin />
-            </a>
+            </Link>
 
           </div>
 
         </div>
 
-        {/* LINKS */}
         <div className="space-y-4">
 
           <h3 className="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">
@@ -91,7 +89,6 @@ const Footer = () => {
 
         </div>
 
-        {/* CONTACT */}
         <div className="space-y-4">
 
           <h3 className="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">
@@ -110,7 +107,6 @@ const Footer = () => {
 
       </div>
 
-      {/* BOTTOM BAR */}
       <div className="border-t border-white/10 bg-white/40 dark:bg-white/5 backdrop-blur-xl">
 
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2">

@@ -38,12 +38,10 @@ const BookingTable = ({ bookings }) => {
 
   return (
     <>
-      {/* TABLE WRAPPER */}
       <div className="overflow-x-auto rounded-3xl border border-white/10 bg-white/60 dark:bg-slate-950/40 backdrop-blur-xl shadow-xl">
 
         <table className="w-full text-sm">
 
-          {/* HEADER */}
           <thead className="text-left border-b border-white/10 bg-white/40 dark:bg-white/5">
             <tr className="text-gray-600 dark:text-gray-300">
               <th className="p-5 font-semibold">Tutor</th>
@@ -54,7 +52,6 @@ const BookingTable = ({ bookings }) => {
             </tr>
           </thead>
 
-          {/* BODY */}
           <tbody>
             {localBookings.map((booking, i) => (
               <tr
@@ -76,7 +73,6 @@ const BookingTable = ({ bookings }) => {
                   {booking.studentEmail}
                 </td>
 
-                {/* STATUS */}
                 <td className="p-5">
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-semibold border
@@ -90,7 +86,6 @@ const BookingTable = ({ bookings }) => {
                   </span>
                 </td>
 
-                {/* ACTION */}
                 <td className="p-5">
                   {booking.status === "cancelled" ? (
                     <button
@@ -116,7 +111,6 @@ const BookingTable = ({ bookings }) => {
         </table>
       </div>
 
-      {/* MODAL */}
       {selectedId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
 

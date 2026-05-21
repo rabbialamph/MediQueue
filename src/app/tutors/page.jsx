@@ -30,7 +30,7 @@ const Tutors = async () => {
 
           <h1 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight text-gray-900 dark:text-white">
             Find Your Perfect
-            <span className="block mt-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-indigo-600 to-blue-600 mt-2 bg-clip-text text-transparent">
               Expert Tutor
             </span>
           </h1>

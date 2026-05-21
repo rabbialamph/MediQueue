@@ -169,7 +169,7 @@ const RegisterPage = () => {
           <div className="flex-1 h-px bg-white/10"></div>
         </div>
 
-        <Button  onClick={GoogleHandleSignIn} className="w-full cursor-pointer py-2 rounded-full bg-white text-black hover:scale-[1.02] transition font-medium flex items-center justify-center gap-2">
+        <Button variant="outline"  onClick={GoogleHandleSignIn} className="w-full cursor-pointer py-2 rounded-full hover:scale-[1.02] transition font-medium flex items-center justify-center gap-2">
           <FcGoogle size={22} />
           Continue with Google
         </Button>

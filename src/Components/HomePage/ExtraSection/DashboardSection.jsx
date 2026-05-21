@@ -37,16 +37,15 @@ const stats = [
 
 const DashboardSection = () => {
   return (
-    <div className="min-h-screen  text-gray-900 dark:text-white">
+    <div className="  text-gray-900 dark:text-white">
 
-      <div className="max-w-7xl mx-auto px-4 py-14 space-y-10">
+      <div className="container mx-auto px-4 py-14 space-y-10">
 
-        {/* HEADER */}
         <div className="text-center space-y-3">
 
           <h1 className="text-3xl md:text-5xl font-black tracking-tight">
             Welcome to{" "}
-            <span className="text-indigo-500">MediQueue</span>
+            <span className="text-blue-600">MediQueue</span>
           </h1>
 
           <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
@@ -55,7 +54,6 @@ const DashboardSection = () => {
 
         </div>
 
-        {/* STATS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {stats.map((item, i) => {
@@ -67,7 +65,6 @@ const DashboardSection = () => {
                 className="group relative p-6 rounded-3xl border border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all"
               >
 
-                {/* glow */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-3xl" />
 
                 <div className="relative flex items-center justify-between">
@@ -96,10 +93,8 @@ const DashboardSection = () => {
 
         </div>
 
-        {/* FEATURE SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          {/* LEFT CARD */}
           <div className="p-8 rounded-3xl border border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-xl shadow-xl space-y-4">
 
             <h2 className="text-xl font-bold">
@@ -117,7 +112,6 @@ const DashboardSection = () => {
 
           </div>
 
-          {/* RIGHT CARD */}
           <div className="p-8 rounded-3xl border border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-xl shadow-xl space-y-4">
 
             <h2 className="text-xl font-bold">
@@ -138,7 +132,6 @@ const DashboardSection = () => {
 
         </div>
 
-        {/* CTA BANNER */}
         <div className="relative overflow-hidden rounded-3xl p-10 text-white bg-gradient-to-r from-indigo-600 to-blue-600 shadow-2xl">
 
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-white/20 rounded-full blur-3xl" />
@@ -154,7 +147,7 @@ const DashboardSection = () => {
               Join thousands of students and tutors in a modern learning ecosystem.
             </p>
 
-            <button className="mt-4 px-8 py-3 bg-white text-indigo-600 font-bold rounded-2xl hover:scale-105 transition">
+            <button className="mt-4 px-8 py-3 bg-white text-blue-600 font-bold rounded-2xl hover:scale-105 transition">
               Get Started Now
             </button>
 

@@ -37,9 +37,8 @@ const features = [
 export default function WhyChoose() {
   return (
     <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto">
         
-        {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Why Choose MediQueue?
@@ -49,7 +48,6 @@ export default function WhyChoose() {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {features.map((item, i) => {
             const Icon = item.icon;
@@ -62,14 +60,12 @@ export default function WhyChoose() {
                 border border-gray-100 dark:border-slate-800
                 transition-all duration-300"
               >
-                {/* Icon */}
                 <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full 
                 bg-gradient-to-r from-indigo-600 to-blue-600 text-white mb-4
                 group-hover:scale-110 transition">
                   <Icon size={22} />
                 </div>
 
-                {/* Text */}
                 <h3 className="font-semibold text-gray-900 dark:text-white">
                   {item.title}
                 </h3>

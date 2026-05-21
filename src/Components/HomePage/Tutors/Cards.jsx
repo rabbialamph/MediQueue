@@ -10,10 +10,8 @@ const Cards = async () => {
   return (
     <div className="container mx-auto my-10 px-4">
 
-      {/* HEADER */}
       <div className="flex items-center justify-between mb-6">
 
-        {/* LEFT TITLE */}
         <div className="flex items-center gap-2">
 
           <div className="p-2 rounded-xl bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
@@ -32,7 +30,6 @@ const Cards = async () => {
 
         </div>
 
-        {/* VIEW ALL */}
         <Link
           href="/tutors"
           className="px-5 py-2 rounded-2xl text-sm font-bold text-white bg-gradient-to-r from-indigo-600 to-blue-600 shadow-lg hover:scale-105 active:scale-95 transition"
@@ -42,8 +39,7 @@ const Cards = async () => {
 
       </div>
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
 
         {tutors.map((tutor) => (
           <TutorsCard key={tutor._id} tutor={tutor} />

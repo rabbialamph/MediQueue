@@ -29,11 +29,10 @@ const MyTutors = async () => {
   }
 
   return (
-    <div className="min-h-screen px-4 py-6 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-950 dark:via-slate-900 dark:to-black">
+    <div className="min-h-screen px-4 py-6">
 
       <div className="container mx-auto space-y-10">
 
-        {/* HEADER */}
         <div className="space-y-2">
 
           <h1 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight">
@@ -46,7 +45,6 @@ const MyTutors = async () => {
 
         </div>
 
-        {/* EMPTY STATE */}
         {tutors.length === 0 ? (
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-2xl shadow-xl p-16 text-center">
 
@@ -77,12 +75,10 @@ const MyTutors = async () => {
         ) : (
           <div className="rounded-3xl border border-white/10 bg-white/50 dark:bg-white/[0.02] backdrop-blur-2xl shadow-2xl overflow-hidden">
 
-            {/* TABLE WRAPPER */}
             <div className="overflow-x-auto">
 
               <table className="w-full text-sm">
 
-                {/* HEADER */}
                 <thead className="bg-white/70 dark:bg-slate-950/60 backdrop-blur-xl border-b border-white/10">
                   <tr className="text-left text-gray-600 dark:text-gray-300">
                     <th className="p-5 font-semibold">Photo</th>
@@ -94,7 +90,6 @@ const MyTutors = async () => {
                   </tr>
                 </thead>
 
-                {/* BODY */}
                 <tbody>
                   {tutors.map((tutor, i) => (
                     <tr
@@ -102,7 +97,6 @@ const MyTutors = async () => {
                       className="group border-b border-white/5 hover:bg-white/40 dark:hover:bg-white/5 transition-all duration-300 hover:scale-[1.01]"
                     >
 
-                      {/* PHOTO */}
                       <td className="p-5">
                         <img
                           src={tutor.photo}
@@ -111,29 +105,24 @@ const MyTutors = async () => {
                         />
                       </td>
 
-                      {/* NAME */}
                       <td className="p-5 font-semibold text-gray-900 dark:text-white">
                         {tutor.tutorName}
                       </td>
 
-                      {/* SUBJECT */}
                       <td className="p-5 text-gray-600 dark:text-gray-300">
                         {tutor.subject}
                       </td>
 
-                      {/* FEE */}
                       <td className="p-5">
                         <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                           ${tutor.hourlyFee}
                         </span>
                       </td>
 
-                      {/* SLOTS */}
                       <td className="p-5 text-gray-600 dark:text-gray-300">
                         {tutor.totalSlot}
                       </td>
 
-                      {/* ACTIONS */}
                       <td className="p-5 text-right">
                         <div className="flex justify-end gap-2">
                           <UpdateMyTutors tutor={tutor} />

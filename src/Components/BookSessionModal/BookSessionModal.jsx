@@ -31,7 +31,6 @@ const BookSessionModal = ({ tutor }) => {
 
   return (
     <>
-      {/* BUTTON */}
       <Button
         onPress={() => {
           if (bookingBlocked) return;
@@ -47,7 +46,6 @@ const BookSessionModal = ({ tutor }) => {
           : "Book Session"}
       </Button>
 
-      {/* MODAL */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
           <div className="w-full max-w-lg rounded-[2rem] p-8 md:p-10 
@@ -57,10 +55,8 @@ const BookSessionModal = ({ tutor }) => {
             dark:shadow-[0_25px_80px_rgba(0,0,0,0.5)]
             space-y-8 relative overflow-hidden">
 
-            {/* Glow */}
             <div className="absolute top-0 right-0 w-60 h-60 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-            {/* HEADER */}
             <div className="space-y-2 relative z-10">
               <h2 className="text-3xl font-black text-neutral-900 dark:text-white">
                 Book Session
@@ -70,15 +66,12 @@ const BookSessionModal = ({ tutor }) => {
               </p>
             </div>
 
-            {/* FORM */}
             <form action={createBooking} className="space-y-6 relative z-10">
 
-              {/* HIDDEN */}
               <input type="hidden" name="tutorId" value={tutor?._id} />
               <input type="hidden" name="tutorName" value={tutor?.tutorName} />
               <input type="hidden" name="studentEmail" value={user?.email} />
 
-              {/* NAME */}
               <TextField>
                 <Label className="text-xs font-bold uppercase text-neutral-500">
                   Student Name
@@ -92,7 +85,6 @@ const BookSessionModal = ({ tutor }) => {
                 <FieldError />
               </TextField>
 
-              {/* PHONE */}
               <TextField>
                 <Label className="text-xs font-bold uppercase text-neutral-500">
                   Phone Number
@@ -106,17 +98,16 @@ const BookSessionModal = ({ tutor }) => {
                 <FieldError />
               </TextField>
 
-              {/* INFO */}
               <div className="rounded-2xl bg-neutral-50 dark:bg-white/[0.03] p-5 text-sm space-y-2">
                 <p><b>Tutor:</b> {tutor?.tutorName}</p>
                 <p><b>Subject:</b> {tutor?.subject}</p>
                 <p><b>Email:</b> {user?.email}</p>
               </div>
 
-              {/* ACTIONS */}
               <div className="flex gap-4">
                 <Button
                   type="button"
+                  variant="outline"
                   onPress={() => setOpen(false)}
                   className="flex-1 py-6 rounded-2xl border"
                 >
@@ -132,7 +123,6 @@ const BookSessionModal = ({ tutor }) => {
                 </Button>
               </div>
 
-              {/* WARNINGS */}
               {noSlotLeft && (
                 <p className="text-sm text-red-500 font-medium">
                   No available slots left.

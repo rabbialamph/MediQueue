@@ -36,7 +36,6 @@ const handleDelete = async () => {
 
   return (
     <>
-      {/* OPEN BUTTON */}
       <Button
         variant="danger"
         className="cursor-pointer"
@@ -45,7 +44,6 @@ const handleDelete = async () => {
         Delete
       </Button>
 
-      {/* MODAL */}
       <AlertDialog isOpen={open} onOpenChange={setOpen}>
         <AlertDialog.Backdrop>
           <AlertDialog.Container>
@@ -77,7 +75,7 @@ const handleDelete = async () => {
                 </Button>
 
                 <Button
-                  color="danger"
+                  variant="danger"
                   onPress={handleDelete}
                   isLoading={loading}
                 >

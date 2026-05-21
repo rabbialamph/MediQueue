@@ -32,7 +32,6 @@ const MyBookedSessions = async () => {
 
       <div className="container mx-auto space-y-8">
 
-        {/* HEADER */}
         <div>
           <h1 className="text-3xl font-black text-neutral-900 dark:text-white">
             My Booked Sessions
@@ -43,7 +42,6 @@ const MyBookedSessions = async () => {
           </p>
         </div>
 
-        {/* EMPTY STATE */}
         {!bookings || bookings.length === 0 ? (
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-2xl shadow-xl p-16 text-center">
 

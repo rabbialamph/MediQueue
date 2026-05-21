@@ -26,7 +26,6 @@ const TutorsCard = ({ tutor }) => {
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/70 dark:bg-white/[0.03] backdrop-blur-xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
 
-      {/* IMAGE */}
       <div className="relative h-32 overflow-hidden">
 
         <img
@@ -37,20 +36,17 @@ const TutorsCard = ({ tutor }) => {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-        {/* SUBJECT */}
         <div className="absolute top-2 left-2">
           <span className="px-2 py-1 rounded-full bg-white/15 backdrop-blur text-white text-[9px] font-bold uppercase">
             {tutor?.subject}
           </span>
         </div>
 
-        {/* RATING */}
         <div className="absolute top-2 right-2 flex items-center gap-1 px-2 py-1 rounded-full bg-white/10 text-white text-[10px]">
           <FaStar className="text-yellow-400 text-[10px]" />
           4.9
         </div>
 
-        {/* NAME */}
         <div className="absolute bottom-2 left-2 right-2">
           <h2 className="text-sm font-black text-white truncate">
             {tutor?.tutorName}
@@ -59,7 +55,6 @@ const TutorsCard = ({ tutor }) => {
 
       </div>
 
-      {/* CONTENT */}
       <div className="p-3 space-y-2">
 
         <div className="flex items-center gap-2 text-[11px] text-gray-600 dark:text-gray-300">
@@ -77,7 +72,6 @@ const TutorsCard = ({ tutor }) => {
           <span className="truncate">{tutor?.availability}</span>
         </div>
 
-        {/* FOOTER */}
         <div className="flex items-center justify-between pt-2 border-t border-white/10">
 
           <div className="text-left">
@@ -93,7 +87,7 @@ const TutorsCard = ({ tutor }) => {
             onClick={handleDetails}
             className="px-3 py-1.5 cursor-pointer rounded-lg text-[10px] font-bold text-white bg-gradient-to-r from-indigo-600 to-blue-600 hover:scale-105 transition"
           >
-            View
+            View Details
           </button>
 
         </div>

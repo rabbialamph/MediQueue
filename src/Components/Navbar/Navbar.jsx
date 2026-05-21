@@ -13,6 +13,7 @@ import {
 
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import NavLinks from "./NavLinks";
+import { Button } from "@heroui/react";
 
 const Navbar = () => {
   const { data } = useSession();
@@ -48,21 +49,15 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/70 dark:bg-slate-950/70 backdrop-blur-2xl">
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2">
         <div className="h-20 flex items-center justify-between">
 
-          {/* LEFT */}
           <div className="flex items-center gap-8">
 
-            {/* LOGO */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-indigo-500 via-blue-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition">
-                <span className="text-white font-black text-lg">M</span>
-              </div>
-
-              <div className="hidden sm:block leading-tight">
+              <div className=" leading-tight">
                 <h2 className="text-xl font-black tracking-tight text-gray-900 dark:text-white">
-                  MediQueue
+                  Medi <span className="text-blue-600">Queue</span> 
                 </h2>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                   Tutor Booking System
@@ -70,19 +65,15 @@ const Navbar = () => {
               </div>
             </Link>
 
-            {/* DESKTOP NAV */}
             <nav className="hidden lg:flex items-center gap-1 px-3 py-2 rounded-full border border-white/10 bg-white/40 dark:bg-white/5 backdrop-blur-xl shadow-sm">
               <NavLinks />
             </nav>
           </div>
 
-          {/* RIGHT */}
           <div className="flex items-center gap-3">
 
-            {/* ICONS */}
             <div className="hidden md:flex items-center gap-2">
 
-              {/* THEME TOGGLE (PREMIUM PILL) */}
               <div className="h-10 w-10 rounded-full border border-white/10 bg-white/60 dark:bg-white/5 flex items-center justify-center hover:scale-105 transition">
                 <ThemeToggle />
               </div>
@@ -93,7 +84,6 @@ const Navbar = () => {
               </button>
             </div>
 
-            {/* USER */}
             {user ? (
               <div className="relative" ref={dropdownRef}>
                 <button
@@ -138,14 +128,14 @@ const Navbar = () => {
                       <Link
                         href="/profile"
                         onClick={() => setOpen(false)}
-                        className="block px-3 py-2 rounded-xl text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 transition"
+                        className="block px-3 py-2 cursor-pointer rounded-xl text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 transition"
                       >
                         My Profile
                       </Link>
 
                       <button
                         onClick={handleLogout}
-                        className="w-full text-left px-3 py-2 rounded-xl text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 transition"
+                        className="w-full cursor-pointer text-left px-3 py-2 rounded-xl text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 transition"
                       >
                         Logout
                       </button>
@@ -157,18 +147,17 @@ const Navbar = () => {
             ) : (
               <div className="hidden md:flex items-center gap-2">
 
-                {/* LOGIN (FIXED SIZE) */}
                 <Link
                   href="/auth/login"
-                  className="px-5 py-2.5 rounded-xl text-sm font-semibold border border-white/10 bg-white/60 dark:bg-white/5 text-gray-700 dark:text-gray-200 hover:scale-105 transition"
                 >
-                  Login
+                  <Button variant="outline" className="px-5 rounded-xl text-sm font-semibold hover:scale-105 transition">
+                     Login
+                  </Button>
                 </Link>
 
-                {/* REGISTER (SAME SIZE SYSTEM) */}
                 <Link
                   href="/auth/register"
-                  className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-blue-600 shadow-md hover:scale-105 transition"
+                  className="px-5 py-2 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-blue-600 shadow-md hover:scale-105 transition"
                 >
                   Register
                 </Link>
@@ -176,7 +165,6 @@ const Navbar = () => {
               </div>
             )}
 
-            {/* MOBILE BUTTON */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="lg:hidden h-10 w-10 rounded-xl border border-white/10 bg-white/60 dark:bg-white/5 flex items-center justify-center"
@@ -188,7 +176,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
       {mobileOpen && (
         <>
           <div
@@ -223,9 +210,10 @@ const Navbar = () => {
                   <Link
                     href="/auth/login"
                     onClick={closeMobileMenu}
-                    className="px-5 py-2.5 rounded-xl text-sm font-semibold border border-white/10 bg-white/60 dark:bg-white/5 text-center"
                   >
+                  <Button variant="outline" className="px-5 py-2.5 rounded-xl text-sm font-semibold text-center">
                     Login
+                  </Button>
                   </Link>
 
                   <Link

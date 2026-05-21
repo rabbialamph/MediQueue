@@ -21,7 +21,6 @@ import { useTheme } from "next-themes";
 const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // ✅ FIX: use next-themes instead of local darkMode state
   const { theme, setTheme } = useTheme();
 
   const router = useRouter();
@@ -59,7 +58,6 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black dark:text-white text-black px-4 py-4 overflow-hidden transition-all">
 
-      {/* THEME TOGGLE (FIXED) */}
       <button
         onClick={() => setTheme(isDark ? "light" : "dark")}
         className="absolute top-5 right-5 p-2 rounded-full bg-white/10 dark:bg-black/10"
@@ -81,7 +79,6 @@ const LoginPage = () => {
 
         <Form onSubmit={onSubmit} className="space-y-5">
 
-          {/* EMAIL */}
           <TextField isRequired>
             <Label className="text-gray-500 text-sm">Email</Label>
             <Input
@@ -97,7 +94,6 @@ const LoginPage = () => {
             <FieldError className="text-red-400 text-xs font-medium" />
           </TextField>
 
-          {/* PASSWORD */}
           <TextField className="relative" isRequired>
             <Label className="text-gray-500 text-sm">Password</Label>
 
@@ -124,7 +120,6 @@ const LoginPage = () => {
             <FieldError className="text-red-400 text-xs font-medium" />
           </TextField>
 
-          {/* FORGOT PASSWORD */}
           <div className="text-right -mt-3">
             <Link
               href="#"
@@ -135,7 +130,6 @@ const LoginPage = () => {
             </Link>
           </div>
 
-          {/* LOGIN BUTTON */}
           <Button
             type="submit"
             className="w-full py-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:scale-[1.02] transition font-semibold shadow-lg cursor-pointer"
@@ -144,22 +138,22 @@ const LoginPage = () => {
           </Button>
         </Form>
 
-        {/* OR */}
         <div className="flex items-center gap-3 my-6 text-gray-500 text-sm">
           <div className="flex-1 h-px bg-white/10"></div>
           OR
           <div className="flex-1 h-px bg-white/10"></div>
         </div>
 
-        {/* GOOGLE */}
-        <div className="mb-4">
-          <Button  onClick={GoogleHandleSignIn} className="w-full cursor-pointer py-2 rounded-full bg-white text-black hover:scale-[1.02] transition font-medium flex items-center justify-center gap-2">
-            <FcGoogle size={22} />
-            Login with Google
-          </Button>
-        </div>
+        <Button
+          variant="bordered"
+          onClick={GoogleHandleSignIn}
+          className="w-full py-2 rounded-full border border-gray-300 dark:border-gray-700 hover:scale-[1.02] transition
+          font-medium flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <FcGoogle size={22} />
+          Login with Google
+        </Button>
 
-        {/* REGISTER */}
         <p className="text-center text-sm text-gray-400">
           Don’t have an account?{" "}
           <Link href="/auth/register" className="text-indigo-400 hover:underline">

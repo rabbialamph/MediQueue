@@ -28,12 +28,10 @@ const TutorsCard = ({ tutor }) => {
   return (
     <div className="group relative overflow-hidden rounded-[32px] border border-[#ECECFF] dark:border-white/[0.06] bg-white/80 dark:bg-white/[0.03] backdrop-blur-2xl shadow-sm hover:shadow-[0_25px_80px_-12px_rgba(59,130,246,0.18)] dark:hover:shadow-[0_25px_80px_-12px_rgba(0,0,0,0.6)] transition-all duration-500 hover:-translate-y-2">
       
-      {/* HOVER GLOW */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/[0.04] via-indigo-500/[0.02] to-transparent" />
       </div>
 
-      {/* IMAGE */}
       <div className="relative h-60 overflow-hidden">
         
         <img
@@ -42,24 +40,20 @@ const TutorsCard = ({ tutor }) => {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
 
-        {/* OVERLAY */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-        {/* SUBJECT */}
         <div className="absolute top-5 left-5">
           <span className="px-4 py-2 rounded-full bg-white/15 backdrop-blur-xl border border-white/10 text-white text-[11px] font-bold tracking-wider uppercase">
             {tutor?.subject}
           </span>
         </div>
 
-        {/* MODE */}
         <div className="absolute top-5 right-5">
           <span className="px-4 py-2 rounded-full bg-blue-600/90 backdrop-blur-xl border border-blue-400/20 text-white text-[11px] font-bold tracking-wider uppercase shadow-lg shadow-blue-500/20">
             {tutor?.mode}
           </span>
         </div>
 
-        {/* BOTTOM INFO */}
         <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
           
           <div>
@@ -72,7 +66,6 @@ const TutorsCard = ({ tutor }) => {
             </p>
           </div>
 
-          {/* RATING */}
           <div className="flex items-center gap-1.5 px-3 py-2 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10">
             <FaStar className="text-yellow-400 text-xs" />
 
@@ -83,13 +76,10 @@ const TutorsCard = ({ tutor }) => {
         </div>
       </div>
 
-      {/* CONTENT */}
       <div className="p-6 relative z-10">
         
-        {/* DETAILS */}
         <div className="space-y-4">
           
-          {/* INSTITUTION */}
           <div className="flex items-center gap-3">
             
             <div className="h-10 w-10 rounded-2xl bg-[#F4F7FF] dark:bg-white/[0.04] border border-[#ECECFF] dark:border-white/[0.05] flex items-center justify-center shrink-0">
@@ -107,7 +97,6 @@ const TutorsCard = ({ tutor }) => {
             </div>
           </div>
 
-          {/* LOCATION */}
           <div className="flex items-center gap-3">
             
             <div className="h-10 w-10 rounded-2xl bg-[#F4F7FF] dark:bg-white/[0.04] border border-[#ECECFF] dark:border-white/[0.05] flex items-center justify-center shrink-0">
@@ -125,7 +114,6 @@ const TutorsCard = ({ tutor }) => {
             </div>
           </div>
 
-          {/* AVAILABILITY */}
           <div className="flex items-center gap-3">
             
             <div className="h-10 w-10 rounded-2xl bg-[#F4F7FF] dark:bg-white/[0.04] border border-[#ECECFF] dark:border-white/[0.05] flex items-center justify-center shrink-0">
@@ -144,10 +132,8 @@ const TutorsCard = ({ tutor }) => {
           </div>
         </div>
 
-        {/* FOOTER */}
         <div className="mt-6 pt-5 border-t border-[#F1F3F9] dark:border-white/[0.05] flex items-center justify-between">
           
-          {/* PRICE */}
           <div>
             <p className="text-[11px] font-bold uppercase tracking-widest text-[#9CA3AF] dark:text-gray-500">
               Hourly Fee
@@ -158,7 +144,6 @@ const TutorsCard = ({ tutor }) => {
             </h3>
           </div>
 
-          {/* BUTTON */}
           <button
             onClick={handleDetails}
             className="px-5 py-3 cursor-pointer rounded-2xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-sm font-bold tracking-wide shadow-xl shadow-indigo-500/20 hover:scale-[1.04] active:scale-95 transition-all duration-300"

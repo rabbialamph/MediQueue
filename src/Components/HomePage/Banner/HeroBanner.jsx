@@ -6,16 +6,14 @@ import Link from "next/link";
 export default function HeroBanner({ slide }) {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-[#020617]">
-      {/* Background */}
 
       <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-cyan-500/10" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left */}
 
           <div>
-            <span className="inline-flex px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-500/10 text-violet-600 text-sm font-medium">
+            <span className="inline-flex px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-500/10 text-blue-600 text-sm font-medium">
               Trusted by 15,000+ Students
             </span>
 
@@ -37,7 +35,6 @@ export default function HeroBanner({ slide }) {
             </div>
           </div>
 
-          {/* Right */}
 
           <div className="relative">
             <div className="relative h-[350px] md:h-120 rounded-[40px] overflow-hidden shadow-2xl">
