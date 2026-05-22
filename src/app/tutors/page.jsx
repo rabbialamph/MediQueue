@@ -82,7 +82,7 @@ const Tutors = async ({ searchParams }) => {
                 : hasDate && !hasSearch
                 ? "Try selecting another session date."
                 : hasSearch && hasDate
-                ? "No tutors match your search and date filter."
+                ? "No tutors match your search & date filter."
                 : "We couldn’t find any tutors right now. Try adjusting filters or check back later."}
             </p>
 
