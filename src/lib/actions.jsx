@@ -43,7 +43,8 @@ export const createTutor = async (formData) => {
   return data;
 };
 
-export const createBooking = async (formData) => {
+
+export const createBooking = async (prevState, formData) => {
   const { token } = await auth.api.getToken({
     headers: await headers(),
   });
@@ -65,12 +66,10 @@ export const createBooking = async (formData) => {
     revalidatePath("/tutors");
     revalidatePath(`/tutors/${booking.tutorId}`);
     revalidatePath("/my-booked-sessions");
-    redirect("/my-booked-sessions");
   }
 
   return data;
 };
-
 
 export const cancelBooking = async (id) => {
   const { token } = await auth.api.getToken({

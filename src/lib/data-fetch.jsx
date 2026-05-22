@@ -1,12 +1,24 @@
 import { headers } from "next/headers";
 import { auth } from "./auth";
 
-export const getTutorsData = async (email) => {
-  const url = email
-    ? `${process.env.NEXT_PUBLIC_SERVER_URL}/tutors?email=${email}`
-    : `${process.env.NEXT_PUBLIC_SERVER_URL}/tutors`;
+
+export const getTutorsData = async (
+  email = null,
+  search = "",
+  startDate = ""
+) => {
+  const params = new URLSearchParams();
+
+  if (email) params.append("email", email);
+  if (search) params.append("search", search);
+  if (startDate) params.append("startDate", startDate);
+
+  const url = `${
+    process.env.NEXT_PUBLIC_SERVER_URL
+  }/tutors?${params.toString()}`;
 
   const res = await fetch(url, { cache: "no-store" });
+
   return res.json();
 };
 
