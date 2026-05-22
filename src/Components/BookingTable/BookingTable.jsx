@@ -44,8 +44,8 @@ const BookingTable = ({ bookings }) => {
 
           <thead className="text-left border-b border-white/10 bg-white/40 dark:bg-white/5">
             <tr className="text-gray-600 dark:text-gray-300">
-              <th className="p-5 font-semibold">Tutor</th>
-              <th className="p-5 font-semibold">Student</th>
+              <th className="p-5 font-semibold">Tutors</th>
+              <th className="p-5 font-semibold">Students</th>
               <th className="p-5 font-semibold">Email</th>
               <th className="p-5 font-semibold">Status</th>
               <th className="p-5 font-semibold">Action</th>
